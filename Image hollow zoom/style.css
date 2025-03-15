@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .img-zoom-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .zoom-image {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .zoom-lens {
+    position: absolute;
+    border: 3px solid #000;
+    width: 100px;  /* Size of the lens */
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    visibility: hidden;
+    background-repeat: no-repeat;
+    transition: all 0.1s ease-in-out;
+    pointer-events: none;  /* Prevent lens from being interacted with directly */
+  }
+  
+  /* Styles for the controls */
+  .controls {
+    margin-top: 20px;
+  }
+  
+  #zoom-slider {
+    width: 80%;
+    margin: 10px;
+  }
+  
+  button {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Circular lens shape (default) */
+  .zoom-lens.circle {
+    border-radius: 50%;
+  }
+  
+  /* Square lens shape */
+  .zoom-lens.square {
+    border-radius: 0;
+  }

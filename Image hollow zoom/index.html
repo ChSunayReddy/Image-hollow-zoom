@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Zoom Effect</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="img-zoom-container">
+      <img id="image" src="iron-toy.jpg" alt="Image to zoom" class="zoom-image">
+      <div id="lens" class="zoom-lens circle"></div> <!-- Default is circle -->
+    </div>
+    
+    <!-- Controls -->
+    <div class="controls">
+      <label for="zoom-slider">Zoom Level: </label>
+      <input type="range" id="zoom-slider" min="1" max="5" step="0.1" value="2">
+      <button id="toggle-shape">Toggle Lens Shape</button> <!--To Change the lens Shape-->
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
